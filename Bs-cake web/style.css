@@ -1,0 +1,13 @@
+.left{
+	width: 200px;
+	float: left;
+	background: red;
+	height: 200px;
+}
+.right{
+	width: 100%;
+	background-color: blue;
+	height: 200px;
+	padding-left: 200px;
+	margin-right: 20px;
+}

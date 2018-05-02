@@ -1,0 +1,102 @@
+div.sky{
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(rgba(196, 228, 253,1),rgba(196, 228, 253,0));
+            padding: 50px;
+            position: relative;
+        }
+        div.grass{
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(rgba(148, 190, 89,0),rgba(148, 190, 89,1));
+        }
+        div.cloud{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #fff;
+            overflow: visible;
+            position: absolute;
+                   
+        }
+        div.cloud::before{
+            content: "";
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: 40px;
+            left: -30px;
+            background: #fff;
+            animation: colorChange 6s linear infinite; 
+        }
+        div.cloud::after{
+            content: "";
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: -40px;
+            background: #fff;
+            animation: colorChange 6s linear infinite; 
+        }
+        div.sky > .c1{
+            top: 80px;
+            left: 50%;
+            animation: move_fast 5s linear infinite, colorChange 6s linear infinite;
+        }
+        div.sky > .c2{
+            transform: scale(.7);
+            top: 160px;
+            left: 40%;
+            animation: move_middle 7s linear infinite, colorChange 6s linear infinite;
+        }
+        div.sky > .c3{
+            transform: scale(.7);
+            top: 50px;
+            left: 30%;
+            animation: move_middle 7s linear infinite, colorChange 6s linear infinite;
+        }
+        div.sky > .c4{
+            transform: scale(.5);
+            top: 140px;
+            left: 56%;
+            animation: move_slow 9s linear infinite, colorChange 6s linear infinite;
+        }
+        div.sky > .c5{
+            transform: scale(.6);
+            top: 65px;
+            left: 70%;
+            animation: move_mostSlow 10s linear infinite, colorChange 6s linear infinite;
+        }
+        .ribbit img{
+            display: block;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            bottom: 50px;
+            right: 200px;
+        }
+        @keyframes move_fast{
+            0%{left: 100%;}
+            100%{left: -20%;}
+        }
+        @keyframes move_middle{
+            0%{left: 100%;}
+            100%{left: -20%;}
+        }
+        @keyframes move_slow{
+            0%{left: 100%;}
+            100%{left: -20%;}
+        }
+        @keyframes move_mostSlow{
+            0%{left: 100%;}
+            100%{left: -20%;}
+        }
+        @keyframes colorChange{
+            0%{background: rgba(255,255,255,1);}
+            100%{background: rgba(255,255,255,.8);}
+        }
